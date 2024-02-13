@@ -1,0 +1,63 @@
+* {
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: content-box;
+}
+
+body {
+	background-color: #fafafa;
+}
+
+.tree {
+	min-width: 450px;
+	max-width: max-content;
+	margin-left: -30px;
+}
+
+.tree a {
+	text-decoration: none;
+	color: #101010;
+	width: 100%;
+}
+
+.tree li {
+	margin-left: 30px;
+	list-style: none;
+}
+
+.tree li > div {
+	display: flex;
+	align-items: center;
+	padding: 7px 3px;
+	gap: 6px;
+	border-bottom: 1px solid #ccc;
+}
+
+.icon {
+	width: 12px;
+	height: 12px;
+	background-image: url('../img/arrow-right.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.icon.empty {
+	background-image: none;
+}
+
+.parent div {
+	cursor: pointer;
+}
+
+.parent > ul {
+	display: none;
+}
+
+.parent.opened > ul {
+	display: block;
+}
+
+.parent.opened > div .icon {
+	transform: rotate(90deg);
+}
